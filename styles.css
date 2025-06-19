@@ -1,0 +1,309 @@
+/* Responsive Dental Pricing Tables CSS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.main-header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.04);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 32px 12px 32px;
+    min-height: 60px;
+}
+.logo-placeholder {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #6366f1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+}
+.brand-name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #312e81;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 36px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(30,41,59,0.07);
+}
+.tables-flex {
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.tables-flex > div {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 28px auto;
+    flex: 1;
+    min-width: 320px;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.35rem;
+    color: #6366f1;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 32px;
+    background: #f1f5f9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(30,41,59,0.04);
+    transition: box-shadow 0.2s;
+}
+.responsive-table th, .responsive-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+.responsive-table th {
+    background: #6366f1;
+    color: #fff;
+    font-size: 1.08em;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+.responsive-table tr:last-child td {
+    border-bottom: none;
+}
+.responsive-table .category {
+    background: #e0e7ff;
+    color: #3730a3;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 6px 8px;
+    display: inline-block;
+}
+/* .responsive-table .highlight { (removido) 
+    color: #d97706;
+    font-weight: bold;
+}
+.responsive-table .gray-header {
+    background: #64748b;
+    color: #fff;
+}
+
+/* Card-like effect for each table */
+.tables-flex > div {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 28px auto;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 1px 8px rgba(30,41,59,0.06);
+    padding: 20px 14px 16px 14px;
+    margin-bottom: 18px;
+    transition: box-shadow 0.2s;
+}
+.tables-flex > div:hover {
+    box-shadow: 0 4px 18px rgba(99,102,241,0.13);
+}
+
+.container > div {
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 1px 8px rgba(30,41,59,0.06);
+    padding: 20px 14px 16px 14px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+    .tables-flex {
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+    justify-content: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .responsive-table, .responsive-table thead, .responsive-table tbody, .responsive-table tr, .responsive-table th, .responsive-table td {
+        display: block;
+        width: 100%;
+    }
+    .responsive-table tr {
+        margin-bottom: 18px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(99,102,241,0.05);
+    }
+    .responsive-table th {
+        background: #6366f1;
+        color: #fff;
+        border-radius: 12px 12px 0 0;
+    }
+    .responsive-table td {
+        border: none;
+        border-bottom: 1px solid #e2e8f0;
+        position: relative;
+        padding-left: 45%;
+        min-height: 44px;
+        background: #f1f5f9;
+    }
+    .responsive-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 40%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #6366f1;
+        content: attr(data-label);
+    }
+    .responsive-table .category, .responsive-table .gray-header {
+        border-radius: 12px 12px 0 0;
+    }
+    .logo-area {
+        padding: 10px 12px 8px 12px;
+    }
+    .brand-name {
+        font-size: 1.25rem;
+    }
+    .logo-placeholder {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.responsive-table th, .responsive-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+.responsive-table th {
+    background: #3a6ea5;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.responsive-table tr:last-child td {
+    border-bottom: none;
+}
+.responsive-table .category {
+    background: #e8f0fe;
+    color: #1a237e;
+    font-weight: bold;
+}
+/* .responsive-table .highlight { (removido) 
+    color: #c62828;
+    font-weight: bold;
+}
+.responsive-table .gray-header {
+    background: #757575;
+    color: #fff;
+}
+@media (max-width: 800px) {
+    .container {
+        padding: 6px;
+    }
+    .responsive-table th, .responsive-table td {
+        padding: 8px 6px;
+        font-size: 0.97em;
+    }
+}
+@media (max-width: 600px) {
+    .responsive-table, .responsive-table thead, .responsive-table tbody, .responsive-table tr, .responsive-table th, .responsive-table td {
+        display: block;
+        width: 100%;
+    }
+    .responsive-table tr {
+        margin-bottom: 18px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .responsive-table th {
+        background: #3a6ea5;
+        color: #fff;
+        border-radius: 8px 8px 0 0;
+    }
+    .responsive-table td {
+        border: none;
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+        padding-left: 45%;
+        min-height: 44px;
+    }
+    .responsive-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 40%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #3a6ea5;
+        content: attr(data-label);
+    }
+    .responsive-table .category, .responsive-table .gray-header {
+        border-radius: 8px 8px 0 0;
+    }
+}
